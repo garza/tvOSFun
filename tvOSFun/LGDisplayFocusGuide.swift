@@ -2,6 +2,7 @@
 //  LGDisplayFocusGuide.swift
 //  FoscusTest
 //
+//  @original source: http://www.captechconsulting.com/blogs/UILayoutGuide--Auto-Layouts-Invisible-Helpers
 //  Created by John David Garza on 10/11/15.
 //  Copyright © 2015 John David Garza. All rights reserved.
 //
@@ -15,9 +16,10 @@ extension UIView {
             sub.showFocusGuides()
         }
         
-        // zero case
+        // base case
         guard let verifiedSubLayers = self.layer.sublayers else { return }
         
+        // if this is a lgfocusguidedisplaylayer, it's from a previous call to showFocusGuides(), remove
         for layer in verifiedSubLayers {
             if layer is LGFocusGuideDisplayLayer {
                 layer.removeFromSuperlayer()
@@ -25,6 +27,7 @@ extension UIView {
         }
         
         for guide in self.layoutGuides {
+            //we only want to show FocusGuides, not LayoutGuides
             if guide is UIFocusGuide {
                 let l = LGFocusGuideDisplayLayer(guide: guide as! UIFocusGuide)
                 self.layer.addSublayer(l)
@@ -40,16 +43,8 @@ class LGFocusGuideDisplayLayer: CAShapeLayer {
         self.path = UIBezierPath(rect: guide.layoutFrame).CGPath
         self.strokeColor = UIColor.redColor().CGColor
         self.lineWidth = 0.5
-        self.lineDashPattern = [2, 2, 2, 2]
+        self.lineDashPattern = [12, 12, 12, 12]
         self.fillColor = UIColor.clearColor().CGColor
-        
-        //animate
-        let dashAnimation = CABasicAnimation(keyPath: "dashAnimation")
-        dashAnimation.duration = 0.75
-        dashAnimation.repeatCount = Float.infinity
-        dashAnimation.fromValue = 0
-        dashAnimation.toValue = 3
-        self.addAnimation(dashAnimation, forKey: "dashAnimation")
     }
     
     // required for any subclass of CAShapeLayer

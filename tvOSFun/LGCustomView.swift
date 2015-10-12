@@ -9,22 +9,48 @@
 import UIKit
 
 class LGCustomView: UIView {
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.setupView()
+    }
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.setupView()
+    }
+    
+    func setupView() {
+        self.layer.shadowOffset = CGSizeMake(0, 10)
+        self.layer.shadowOpacity = 0
+        self.layer.shadowRadius = 15
+        self.layer.shadowColor = UIColor.blackColor().CGColor
+    }
     
     override func canBecomeFocused() -> Bool {
         return true
     }
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
-
+        
         coordinator.addCoordinatedAnimations({ [unowned self] in
             let duration = UIView.inheritedAnimationDuration()
             if self.focused {
                 let animation = CABasicAnimation(keyPath: "transform.rotation")
-                animation.duration = 0.75*duration
-                animation.repeatCount = 3
+                animation.duration = 0.5*duration
+                animation.repeatCount = 2
                 animation.autoreverses = true
-                animation.toValue = self.rads(5)
+                animation.toValue = self.rads(1)
                 self.layer.addAnimation(animation, forKey: "wiggle")
+                
+                let shadowAnimation = CABasicAnimation(keyPath: "shadowOpacity")
+                shadowAnimation.fromValue = 0
+                shadowAnimation.toValue = 0.6
+                shadowAnimation.duration = duration
+                self.layer.addAnimation(shadowAnimation, forKey: "shadow")
+                self.layer.shadowOpacity = 0.6
+            } else {
+                self.layer.shadowOpacity = 0
             }
             }, completion: nil)
     }

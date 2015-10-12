@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9058" systemVersion="15B30a" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="9058" systemVersion="15A279b" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="sB6-Vm-Y5n">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9048"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Cycle Example-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LGViewController" customModule="FoscusTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LGViewControllerCycle" customModule="tvOSFun" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,32 +17,136 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LTB-rG-dmU" customClass="LGCustomView" customModule="FoscusTest" customModuleProvider="target">
-                                <rect key="frame" x="20" y="20" width="897" height="505"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Poq-lm-RoP" customClass="LGCustomView" customModule="tvOSFun" customModuleProvider="target">
+                                <rect key="frame" x="1305" y="310" width="450" height="450"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="450" id="f8d-0K-zNa"/>
+                                    <constraint firstAttribute="height" constant="450" id="syL-ZQ-M5v"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Poq-lm-RoP" customClass="LGCustomView" customModule="FoscusTest" customModuleProvider="target">
-                                <rect key="frame" x="1003" y="20" width="897" height="505"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Dw-J3-CxU">
+                                <animations/>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="65d-gg-GPb" userLabel="Center" customClass="LGCustomView" customModule="tvOSFun" customModuleProvider="target">
+                                <rect key="frame" x="735" y="310" width="450" height="450"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="L9e-U7-7RJ"/>
+                                    <constraint firstAttribute="width" constant="450" id="TwT-pS-9r2"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="65d-gg-GPb" customClass="LGCustomView" customModule="FoscusTest" customModuleProvider="target">
-                                <rect key="frame" x="512" y="555" width="897" height="505"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTB-rG-dmU" customClass="LGCustomView" customModule="tvOSFun" customModuleProvider="target">
+                                <rect key="frame" x="165" y="310" width="450" height="450"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="450" id="Vrc-GZ-zlx"/>
+                                    <constraint firstAttribute="height" constant="450" id="yhV-ie-Wld"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="65d-gg-GPb" firstAttribute="leading" secondItem="LTB-rG-dmU" secondAttribute="trailing" constant="120" id="0Xl-we-bBf"/>
+                            <constraint firstAttribute="bottom" secondItem="65d-gg-GPb" secondAttribute="bottom" constant="320" id="78C-1g-xht"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LTB-rG-dmU" secondAttribute="bottom" constant="320" id="Ftz-R0-Ddi"/>
+                            <constraint firstItem="Poq-lm-RoP" firstAttribute="leading" secondItem="65d-gg-GPb" secondAttribute="trailing" constant="120" id="P7y-f1-1A0"/>
+                            <constraint firstItem="65d-gg-GPb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gr8-QP-bNJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Poq-lm-RoP" secondAttribute="bottom" constant="320" id="jft-ul-Qi1"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Cycle Example" id="Rdf-lz-do9"/>
                     <connections>
-                        <outlet property="bottomCenterView" destination="65d-gg-GPb" id="fCr-pY-3JC"/>
-                        <outlet property="topLeftView" destination="LTB-rG-dmU" id="hqY-3O-XzC"/>
-                        <outlet property="topRightView" destination="Poq-lm-RoP" id="fec-N3-eNm"/>
+                        <outlet property="centerView" destination="65d-gg-GPb" id="7aK-f6-TfT"/>
+                        <outlet property="leftView" destination="LTB-rG-dmU" id="nPP-53-30C"/>
+                        <outlet property="rightView" destination="Poq-lm-RoP" id="ghs-4z-x3U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2572" y="399"/>
+        </scene>
+        <!--UIKit Catalog Example-->
+        <scene sceneID="OU8-Yz-1MA">
+            <objects>
+                <viewController id="z3i-Iq-mdk" customClass="LGViewControllerSwitch" customModule="tvOSFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uQX-aX-ueG"/>
+                        <viewControllerLayoutGuide type="bottom" id="ssd-cx-Vb6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s8m-6T-lAN">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S7N-ze-MyH" customClass="LGCustomView" customModule="tvOSFun" customModuleProvider="target">
+                                <rect key="frame" x="360" y="110" width="450" height="450"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="450" id="3NV-Ui-Ihj"/>
+                                    <constraint firstAttribute="height" constant="450" id="pl7-VC-Cp6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NnJ-kF-nNv" customClass="LGCustomView" customModule="tvOSFun" customModuleProvider="target">
+                                <rect key="frame" x="1110" y="110" width="450" height="450"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="Ymi-Ue-Y9E"/>
+                                    <constraint firstAttribute="width" constant="450" id="fMF-Lx-XJ6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSs-r2-nFq" customClass="LGCustomView" customModule="tvOSFun" customModuleProvider="target">
+                                <rect key="frame" x="360" y="610" width="450" height="450"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="Oq3-hF-60X"/>
+                                    <constraint firstAttribute="width" constant="450" id="pqq-I0-a8B"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstItem="ssd-cx-Vb6" firstAttribute="top" secondItem="sSs-r2-nFq" secondAttribute="bottom" constant="20" id="24n-v7-pAQ"/>
+                            <constraint firstItem="ssd-cx-Vb6" firstAttribute="top" secondItem="S7N-ze-MyH" secondAttribute="bottom" constant="520" id="2wR-kM-zz7"/>
+                            <constraint firstItem="S7N-ze-MyH" firstAttribute="leading" secondItem="s8m-6T-lAN" secondAttribute="leadingMargin" constant="340" id="ZKv-wZ-Qe7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NnJ-kF-nNv" secondAttribute="trailing" constant="340" id="gIO-cw-QFj"/>
+                            <constraint firstItem="sSs-r2-nFq" firstAttribute="leading" secondItem="s8m-6T-lAN" secondAttribute="leadingMargin" constant="340" id="kaY-lu-i33"/>
+                            <constraint firstItem="ssd-cx-Vb6" firstAttribute="top" secondItem="NnJ-kF-nNv" secondAttribute="bottom" constant="520" id="oEP-jN-RfW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="UIKit Catalog Example" id="Yb6-ee-rnM"/>
+                    <connections>
+                        <outlet property="bottomCenterView" destination="sSs-r2-nFq" id="LHp-AI-UkO"/>
+                        <outlet property="topLeftView" destination="S7N-ze-MyH" id="cIb-fl-qpr"/>
+                        <outlet property="topRightView" destination="NnJ-kF-nNv" id="fAa-Eh-mon"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kv9-C1-riS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2572" y="1667"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="VZ5-We-qnq">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="sB6-Vm-Y5n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="gYs-Oj-Get">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="z3i-Iq-mdk" kind="relationship" relationship="viewControllers" id="mlo-RG-GJ9"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="V9k-Ux-fSk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QwV-4H-gj3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="440" y="399"/>
         </scene>
