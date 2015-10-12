@@ -7,26 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8AF89B991BCC2CFD00E91C92 /* LGViewControllerSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF89B981BCC2CFD00E91C92 /* LGViewControllerSwitch.swift */; };
 		CE76DA4F1BCB6F1C0037EE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76DA4E1BCB6F1C0037EE18 /* AppDelegate.swift */; };
-		CE76DA511BCB6F1C0037EE18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76DA501BCB6F1C0037EE18 /* ViewController.swift */; };
 		CE76DA561BCB6F1C0037EE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE76DA551BCB6F1C0037EE18 /* Assets.xcassets */; };
 		CE76DA611BCB6F360037EE18 /* LGCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76DA5D1BCB6F360037EE18 /* LGCustomView.swift */; };
 		CE76DA621BCB6F360037EE18 /* LGDisplayFocusGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76DA5E1BCB6F360037EE18 /* LGDisplayFocusGuide.swift */; };
-		CE76DA631BCB6F360037EE18 /* LGFocusGuidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76DA5F1BCB6F360037EE18 /* LGFocusGuidesViewController.swift */; };
-		CE76DA641BCB6F360037EE18 /* LGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76DA601BCB6F360037EE18 /* LGViewController.swift */; };
+		CE76DA641BCB6F360037EE18 /* LGViewControllerCycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76DA601BCB6F360037EE18 /* LGViewControllerCycle.swift */; };
 		CE76DA661BCB6F4E0037EE18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE76DA651BCB6F4E0037EE18 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8AF89B981BCC2CFD00E91C92 /* LGViewControllerSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGViewControllerSwitch.swift; sourceTree = "<group>"; };
 		CE76DA4B1BCB6F1C0037EE18 /* tvOSFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOSFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE76DA4E1BCB6F1C0037EE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE76DA501BCB6F1C0037EE18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE76DA551BCB6F1C0037EE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE76DA571BCB6F1C0037EE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE76DA5D1BCB6F360037EE18 /* LGCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGCustomView.swift; sourceTree = "<group>"; };
 		CE76DA5E1BCB6F360037EE18 /* LGDisplayFocusGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGDisplayFocusGuide.swift; sourceTree = "<group>"; };
-		CE76DA5F1BCB6F360037EE18 /* LGFocusGuidesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGFocusGuidesViewController.swift; sourceTree = "<group>"; };
-		CE76DA601BCB6F360037EE18 /* LGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGViewController.swift; sourceTree = "<group>"; };
+		CE76DA601BCB6F360037EE18 /* LGViewControllerCycle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGViewControllerCycle.swift; sourceTree = "<group>"; };
 		CE76DA651BCB6F4E0037EE18 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8AF89B971BCC2CC400E91C92 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE76DA5E1BCB6F360037EE18 /* LGDisplayFocusGuide.swift */,
+				CE76DA4E1BCB6F1C0037EE18 /* AppDelegate.swift */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		CE76DA421BCB6F1C0037EE18 = {
 			isa = PBXGroup;
 			children = (
@@ -60,14 +67,12 @@
 		CE76DA4D1BCB6F1C0037EE18 /* tvOSFun */ = {
 			isa = PBXGroup;
 			children = (
-				CE76DA4E1BCB6F1C0037EE18 /* AppDelegate.swift */,
 				CE76DA5D1BCB6F360037EE18 /* LGCustomView.swift */,
-				CE76DA5E1BCB6F360037EE18 /* LGDisplayFocusGuide.swift */,
-				CE76DA5F1BCB6F360037EE18 /* LGFocusGuidesViewController.swift */,
-				CE76DA601BCB6F360037EE18 /* LGViewController.swift */,
+				CE76DA601BCB6F360037EE18 /* LGViewControllerCycle.swift */,
+				8AF89B981BCC2CFD00E91C92 /* LGViewControllerSwitch.swift */,
 				CE76DA651BCB6F4E0037EE18 /* Main.storyboard */,
-				CE76DA501BCB6F1C0037EE18 /* ViewController.swift */,
 				CE76DA551BCB6F1C0037EE18 /* Assets.xcassets */,
+				8AF89B971BCC2CC400E91C92 /* Resources */,
 				CE76DA571BCB6F1C0037EE18 /* Info.plist */,
 			);
 			path = tvOSFun;
@@ -143,12 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE76DA631BCB6F360037EE18 /* LGFocusGuidesViewController.swift in Sources */,
+				8AF89B991BCC2CFD00E91C92 /* LGViewControllerSwitch.swift in Sources */,
 				CE76DA611BCB6F360037EE18 /* LGCustomView.swift in Sources */,
-				CE76DA511BCB6F1C0037EE18 /* ViewController.swift in Sources */,
 				CE76DA4F1BCB6F1C0037EE18 /* AppDelegate.swift in Sources */,
 				CE76DA621BCB6F360037EE18 /* LGDisplayFocusGuide.swift in Sources */,
-				CE76DA641BCB6F360037EE18 /* LGViewController.swift in Sources */,
+				CE76DA641BCB6F360037EE18 /* LGViewControllerCycle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +283,7 @@
 				CE76DA5C1BCB6F1C0037EE18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
