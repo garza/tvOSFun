@@ -9,17 +9,25 @@
 /* Begin PBXBuildFile section */
 		CE76DA4F1BCB6F1C0037EE18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76DA4E1BCB6F1C0037EE18 /* AppDelegate.swift */; };
 		CE76DA511BCB6F1C0037EE18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76DA501BCB6F1C0037EE18 /* ViewController.swift */; };
-		CE76DA541BCB6F1C0037EE18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE76DA521BCB6F1C0037EE18 /* Main.storyboard */; };
 		CE76DA561BCB6F1C0037EE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE76DA551BCB6F1C0037EE18 /* Assets.xcassets */; };
+		CE76DA611BCB6F360037EE18 /* LGCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76DA5D1BCB6F360037EE18 /* LGCustomView.swift */; };
+		CE76DA621BCB6F360037EE18 /* LGDisplayFocusGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76DA5E1BCB6F360037EE18 /* LGDisplayFocusGuide.swift */; };
+		CE76DA631BCB6F360037EE18 /* LGFocusGuidesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76DA5F1BCB6F360037EE18 /* LGFocusGuidesViewController.swift */; };
+		CE76DA641BCB6F360037EE18 /* LGViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76DA601BCB6F360037EE18 /* LGViewController.swift */; };
+		CE76DA661BCB6F4E0037EE18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE76DA651BCB6F4E0037EE18 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE76DA4B1BCB6F1C0037EE18 /* tvOSFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOSFun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE76DA4E1BCB6F1C0037EE18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE76DA501BCB6F1C0037EE18 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE76DA531BCB6F1C0037EE18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE76DA551BCB6F1C0037EE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE76DA571BCB6F1C0037EE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE76DA5D1BCB6F360037EE18 /* LGCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGCustomView.swift; sourceTree = "<group>"; };
+		CE76DA5E1BCB6F360037EE18 /* LGDisplayFocusGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGDisplayFocusGuide.swift; sourceTree = "<group>"; };
+		CE76DA5F1BCB6F360037EE18 /* LGFocusGuidesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGFocusGuidesViewController.swift; sourceTree = "<group>"; };
+		CE76DA601BCB6F360037EE18 /* LGViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LGViewController.swift; sourceTree = "<group>"; };
+		CE76DA651BCB6F4E0037EE18 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +61,12 @@
 			isa = PBXGroup;
 			children = (
 				CE76DA4E1BCB6F1C0037EE18 /* AppDelegate.swift */,
+				CE76DA5D1BCB6F360037EE18 /* LGCustomView.swift */,
+				CE76DA5E1BCB6F360037EE18 /* LGDisplayFocusGuide.swift */,
+				CE76DA5F1BCB6F360037EE18 /* LGFocusGuidesViewController.swift */,
+				CE76DA601BCB6F360037EE18 /* LGViewController.swift */,
+				CE76DA651BCB6F4E0037EE18 /* Main.storyboard */,
 				CE76DA501BCB6F1C0037EE18 /* ViewController.swift */,
-				CE76DA521BCB6F1C0037EE18 /* Main.storyboard */,
 				CE76DA551BCB6F1C0037EE18 /* Assets.xcassets */,
 				CE76DA571BCB6F1C0037EE18 /* Info.plist */,
 			);
@@ -120,7 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE76DA561BCB6F1C0037EE18 /* Assets.xcassets in Resources */,
-				CE76DA541BCB6F1C0037EE18 /* Main.storyboard in Resources */,
+				CE76DA661BCB6F4E0037EE18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,23 +143,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE76DA631BCB6F360037EE18 /* LGFocusGuidesViewController.swift in Sources */,
+				CE76DA611BCB6F360037EE18 /* LGCustomView.swift in Sources */,
 				CE76DA511BCB6F1C0037EE18 /* ViewController.swift in Sources */,
 				CE76DA4F1BCB6F1C0037EE18 /* AppDelegate.swift in Sources */,
+				CE76DA621BCB6F360037EE18 /* LGDisplayFocusGuide.swift in Sources */,
+				CE76DA641BCB6F360037EE18 /* LGViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CE76DA521BCB6F1C0037EE18 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE76DA531BCB6F1C0037EE18 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CE76DA581BCB6F1C0037EE18 /* Debug */ = {
