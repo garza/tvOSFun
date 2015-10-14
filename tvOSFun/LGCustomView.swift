@@ -15,11 +15,6 @@ class LGCustomView: UIView {
         self.setupView()
     }
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.setupView()
-    }
-    
     func setupView() {
         self.layer.shadowOffset = CGSizeMake(0, 10)
         self.layer.shadowOpacity = 0

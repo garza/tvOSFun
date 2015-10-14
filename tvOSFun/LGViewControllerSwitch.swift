@@ -25,6 +25,8 @@ class LGViewControllerSwitch: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*
         focusGuide = UIFocusGuide()
         view.addLayoutGuide(focusGuide)
 
@@ -35,22 +37,25 @@ class LGViewControllerSwitch: UIViewController {
         // Anchor the width and height of the focus guide.
         focusGuide.widthAnchor.constraintEqualToAnchor(topRightView.widthAnchor).active = true
         focusGuide.heightAnchor.constraintEqualToAnchor(bottomCenterView.heightAnchor).active = true
+        */
     }
 
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
         super.didUpdateFocusInContext(context, withAnimationCoordinator: coordinator)
-        
+
+        /*
         guard let nextFocusedView = context.nextFocusedView else { return }
         
         switch nextFocusedView {
         case topRightView:
-            focusGuide.preferredFocusedView = topLeftView
+            focusGuide.preferredFocusedView = bottomCenterView
         case bottomCenterView:
-            focusGuide.preferredFocusedView = topLeftView
+            focusGuide.preferredFocusedView = topRightView
         default:
             focusGuide.preferredFocusedView = nil
         }
+        */
     }
     
     override func viewDidLayoutSubviews() {
